@@ -1,38 +1,128 @@
 .App {
+  background-color: #7db7ce;
+  background-image: linear-gradient(0deg, #537ab4 0%, #083d8d 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.App-header>h1 {
+  font-family: Palatino, Baskerville, Times, 'Times New Roman', serif;
+  width: 100%;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  color: black;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: rgb(37, 21, 175);
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.Messages-list {
+  border: solid 2px #eeaeca;
+  padding: 100px 0;
+  max-width: 1800px;
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  border-radius: 80px;
+  box-shadow: 10px 10px 10px 10px rgba(51, 51, 51, 0.281);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Messages-message {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.main-member>.Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message>.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 25%;
+  display: inline-block;
+  margin: 25px 10px -10px;
+}
+
+.Message-content>.username {
+  display: block;
+  color: black;
+  font-size: 17px;
+  padding-bottom: 4px;
+}
+
+.Message-content>.text {
+  background-color: #37128d;
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 10px;
   color: white;
+  display: inline-block;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
 }
 
-.App-link {
-  color: #61dafb;
+.main-member>.Message-content .text {
+  background-color: rgb(15, 0, 224);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Input {
+  padding-top: 20px;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 95vh;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-bottom: 0px;
+  border: 1px solid #0093E9;
+  flex-grow: 1;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
+}
+
+button {
+  background-color: #018cdd;
+  padding: 5px 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(0, 64, 119);
+  color: rgb(255, 255, 255);
 }
