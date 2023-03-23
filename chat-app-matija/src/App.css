@@ -1,21 +1,26 @@
 .App {
-  background-color: #7db7ce;
-  background-image: linear-gradient(0deg, #537ab4 0%, #083d8d 100%);
+  background-image: url('https://img.freepik.com/free-vector/speech-bubble-pack_24877-57088.jpg?w=826&t=st=1679259721~exp=1679260321~hmac=fecd15158a4b6943599b6056536f2216c6ff7d317a5727bba9e98880b269ebfb');
+  background-size: small;
+  background-position: center;   
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header>h1 {
   font-family: Palatino, Baskerville, Times, 'Times New Roman', serif;
   width: 100%;
   text-align: center;
-  color: black;
+  color: blue;
 }
 
 .App-header {
-  background: rgb(37, 21, 175);
+  overflow: visible;
+  /*background: rgb(37, 21, 175);
+  background-image: linear-gradient(0deg, #537ab4 0%, #083d8d 100%);*/
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
@@ -85,19 +90,21 @@
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
 }
 
-.main-member>.Message-content .text {
+.currentMember>.Message-content .text {
   background-color: rgb(15, 0, 224);
 }
 
 .Input {
   padding-top: 20px;
+  display: flex;
+  width: 100vh;
 }
 
 form {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  max-width: 95vh;
+  max-width: 100vh;
   margin: 0 auto 40px;
 }
 
@@ -106,7 +113,7 @@ input {
   font-size: 20px;
   border-radius: 10px;
   padding-bottom: 0px;
-  border: 1px solid #0093E9;
+  border: 1px solid #036fad;
   flex-grow: 1;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.247);
 }

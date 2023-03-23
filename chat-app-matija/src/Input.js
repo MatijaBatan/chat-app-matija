@@ -10,8 +10,10 @@ function Input(props) {
   //Submit function for input value
   function onSubmit(e) {
     e.preventDefault();
+    if (text.trim() !== '') {
     setText('');
     props.onSendMessage(text);
+    }
   }
 
   return (
@@ -21,7 +23,7 @@ function Input(props) {
           onChange={onChange}
           value={text}
           type='text'
-          placeholder='Enter your message and press ENTER'
+          placeholder='Enter your message'
           autoFocus={true}
         />
         <button>Send</button>
